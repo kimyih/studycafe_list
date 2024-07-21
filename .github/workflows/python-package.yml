@@ -39,7 +39,8 @@ jobs:
         # python lchayim.py
         # python mentro.py
         # python doit.py
-        python holic.py
+        # python holic.py
+        python seldeok.py
     - name: Commit and Push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -55,7 +56,8 @@ jobs:
         # git add lchayim/lchayim_*.json
         # git add mentro/mentro_*.json
         # git add doit/doit_*.json
-        git add holic/holic_*.json
+        # git add holic/holic_*.json
+        git add seldeok/seldeok_*.json
         
         git commit -m "차트 수집 완료"
         git push origin main
