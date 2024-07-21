@@ -34,7 +34,8 @@ jobs:
         # python aplus.py
         # python backya.py
         # python better.py
-        python dongne.py
+        # python dongne.py
+        python dotori.py
     - name: Commit and Push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -45,7 +46,8 @@ jobs:
         # git add aplus/aplus_*.json
         # git add backya/backya_*.json
         # git add better/better_*.json
-        git add dongne/dongne_*.json
+        # git add dongne/dongne_*.json
+        git add dotori/dotori_*.json
 
         
         git commit -m "차트 수집 완료"
