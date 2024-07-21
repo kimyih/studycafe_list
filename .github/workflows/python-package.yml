@@ -46,7 +46,8 @@ jobs:
         # python tobuki.py
         # python aura.py
         # python bestihen.py
-        python winon.py
+        # python winon.py
+        python raeng.py
         
     - name: Commit and Push
       env:
@@ -70,7 +71,8 @@ jobs:
         # git add tobuki/tobuki_*.json
         # git add aura/aura_*.json
         # git add bestihen/bestihen_*.json
-        git add winon/winon_*.json
+        # git add winon/winon_*.json
+        git add raeng/raeng_*.json
         
         git commit -m "차트 수집 완료"
         git push origin main
