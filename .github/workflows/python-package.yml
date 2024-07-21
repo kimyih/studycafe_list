@@ -26,9 +26,11 @@ jobs:
     - name: List files for debugging
       run: |
         ls -R
+        ls -la
+        ls -la bomnal.py
     - name: Run Python scripts
       run: |
-        python pybomnal_.py
+        python bomnal.py
     - name: Commit and Push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
