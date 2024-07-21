@@ -217,7 +217,15 @@ def crawling_main():
 def save_to_json():
     # 데이터를 JSON 파일로 저장
     file_name = f"bomnal/bomnal_{current_date}.json"
-    naver_res.to_json(file_name, orient='records', force_ascii=False)
+    
+    # DataFrame을 딕셔너리 리스트로 변환
+    data = naver_res.to_dict(orient='records')
+    
+    # JSON 파일로 저장 (들여쓰기 적용)
+    with open(file_name, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    
+    print(f"데이터가 {file_name}에 저장되었습니다.")
 
 page_num = 1
 while True:
