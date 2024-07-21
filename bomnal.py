@@ -15,8 +15,13 @@ from webdriver_manager.chrome import ChromeDriverManager
 current_date = datetime.now().strftime("%Y-%m-%d")
 filename = f"bomnal_{current_date}.json"
 
-# 웹 드라이버 실행
-driver = webdriver.Chrome(ChromeDriverManager().install())
+# 웹 드라이버 실행 (헤드리스 모드)
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+
 keyword = '봄날의 서재'
 url = f'https://map.naver.com/p/search/{keyword}'
 driver.get(url)
@@ -245,6 +250,10 @@ while True:
 
 # JSON 파일로 저장
 save_to_json()
+
+# 브라우저 종료
+driver.quit()
+
 
 # 브라우저 종료
 driver.quit()
