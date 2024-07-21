@@ -39,6 +39,6 @@ jobs:
         git config --global user.email "wlsakf23@gmail.com"
         git config --global user.name "kimyih"
         # git add bomnal/bomnal_*.json
-        git add aplus/alplus_*.json
+        git add aplus/aplus_*.json
         git commit -m "차트 수집 완료"
         git push origin main
