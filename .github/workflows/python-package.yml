@@ -45,7 +45,8 @@ jobs:
         # python tojeu.py
         # python tobuki.py
         # python aura.py
-        python bestihen.py
+        # python bestihen.py
+        python winon.py
         
     - name: Commit and Push
       env:
@@ -68,7 +69,8 @@ jobs:
         # git add tojeu/tojeu_*.json
         # git add tobuki/tobuki_*.json
         # git add aura/aura_*.json
-        git add bestihen/bestihen_*.json
+        # git add bestihen/bestihen_*.json
+        git add winon/winon_*.json
         
         git commit -m "차트 수집 완료"
         git push origin main
