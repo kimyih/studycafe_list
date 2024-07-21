@@ -9,13 +9,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from datetime import datetime
 import json
 import numpy as np
+from webdriver_manager.chrome import ChromeDriverManager
 
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"cafe_{current_date}.json"
+filename = f"bomnal_{current_date}.json"
 
 # 웹 드라이버 실행
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(ChromeDriverManager().install())
 keyword = '봄날의 서재'
 url = f'https://map.naver.com/p/search/{keyword}'
 driver.get(url)
@@ -209,7 +210,8 @@ def crawling_main():
 def save_to_json():
     # 데이터를 JSON 파일로 저장
     file_name = f"bomnal/bomnal_{current_date}.json"
-  
+    naver_res.to_json(file_name, orient='records', force_ascii=False)
+
 page_num = 1
 while True:
     time.sleep(1.5)
