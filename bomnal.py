@@ -16,12 +16,12 @@ current_date = datetime.now().strftime("%Y-%m-%d")
 filename = f"bomnal_{current_date}.json"
 
 # 웹 드라이버 실행 (헤드리스 모드)
+driver_path = ChromeDriverManager().install()
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
-driver_path = ChromeDriverManager().install()
-driver = webdriver.Chrome(driver_path, options=options)
+driver = webdriver.Chrome(executable_path=driver_path, options=options)
 
 keyword = '봄날의 서재'
 url = f'https://map.naver.com/p/search/{keyword}'
