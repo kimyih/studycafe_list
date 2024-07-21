@@ -32,7 +32,8 @@ jobs:
       run: |
         # python bomnal.py
         # python aplus.py
-        python backya.py
+        # python backya.py
+        python better.py
     - name: Commit and Push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,6 +42,9 @@ jobs:
         git config --global user.name "kimyih"
         # git add bomnal/bomnal_*.json
         # git add aplus/aplus_*.json
-        git add backya/backya_*.json
+        # git add backya/backya_*.json
+        git add better/better_*.json
+
+        
         git commit -m "차트 수집 완료"
         git push origin main
