@@ -42,7 +42,8 @@ jobs:
         # python holic.py
         # python seldeok.py
         # python ola.py
-        python tojeu.py
+        # python tojeu.py
+        python tobuki.py
     - name: Commit and Push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -61,7 +62,8 @@ jobs:
         # git add holic/holic_*.json
         # git add seldeok/seldeok_*.json
         # git add ola/ola_*.json
-        git add tojeu/tojeu_*.json
+        # git add tojeu/tojeu_*.json
+        git add tobuki/tobuki_*.json
         
         git commit -m "차트 수집 완료"
         git push origin main
