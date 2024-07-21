@@ -30,7 +30,7 @@ jobs:
         pip install webdriver_manager
     - name: Run Python scripts
       run: |
-        python3 pyzaksim_zaksim_.py
+        python3 pybomnal_.py
         
         
   
@@ -38,7 +38,7 @@ jobs:
       run : |
         git config --global user.email "wlsakf23@gmail.com"
         git config --global user.name "kimyih"
-        git add zaksim/zaksim*.json
+        git add bomnal/bomnal_*.json
         
         
         git commit -m "차트 수집 완료"
